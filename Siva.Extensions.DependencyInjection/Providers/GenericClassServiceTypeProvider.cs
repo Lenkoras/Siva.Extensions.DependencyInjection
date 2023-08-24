@@ -17,7 +17,7 @@
             {
                 if (currentTypeToCompare.IsGenericType && currentTypeToCompare.GetGenericTypeDefinition() == AssignableType)
                 {
-                    return implementationType;
+                    return currentTypeToCompare;
                 }
                 else
                 {
