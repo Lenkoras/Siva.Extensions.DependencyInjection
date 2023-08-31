@@ -1,4 +1,4 @@
-# Siva.Extensions.DependencyInjection
+# Siva.Extensions.DependencyInjection.Implementations
 Extensions designed to add all implementations of an interface or class from a sequence of types or assemblies.
 
 # How to use

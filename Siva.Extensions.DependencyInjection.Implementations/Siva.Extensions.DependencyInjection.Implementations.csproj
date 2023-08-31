@@ -16,8 +16,8 @@
     <Version>1.0.0</Version>
     <Authors>Lenkoras</Authors>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <RepositoryUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection</RepositoryUrl>
-    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection.Implementations</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection.Implementations</PackageProjectUrl>
     <PackageTags>di implementation-scanner service-type-provider</PackageTags>
     <Description>
         A simple implementation scanner.
