@@ -11,4 +11,19 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PackageId>Siva.Extensions.DependencyInjection</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Lenkoras</Authors>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <RepositoryUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection</RepositoryUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageTags>di implementation-scanner service-type-provider</PackageTags>
+    <Description>
+        A simple implementation scanner.
+        Selects non-abstract, non-sealed classes from the provided types and 
+        adds to the collection of services those related to the provided type. 
+        It can be implementation or inheritance.
+    </Description>
+  </PropertyGroup>
 </Project>
