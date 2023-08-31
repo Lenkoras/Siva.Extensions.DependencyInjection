@@ -12,18 +12,18 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <PackageId>Siva.Extensions.DependencyInjection</PackageId>
+    <PackageId>Siva.Extensions.DependencyInjection.Implementations</PackageId>
     <Version>1.0.0</Version>
     <Authors>Lenkoras</Authors>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection.Implementations</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Lenkoras/Siva.Extensions.DependencyInjection.Implementations</PackageProjectUrl>
-    <PackageTags>di implementation-scanner service-type-provider</PackageTags>
-    <Description>
-        A simple implementation scanner.
-        Selects non-abstract, non-sealed classes from the provided types and 
-        adds to the collection of services those related to the provided type. 
-        It can be implementation or inheritance.
-    </Description>
+    <PackageTags>dependency-injection di implementation-selector service-type-provider</PackageTags>
+    <Description>Selects non-abstract, non-sealed classes from the provided types and adds to the collection of services those related to the provided type. 
+It can be implementation or inheritance.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <AnalysisLevel>6.0</AnalysisLevel>
+    <Title>A simple implementation selector.</Title>
   </PropertyGroup>
 </Project>
