@@ -110,3 +110,5 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 This behavior is used because sealed types can't be implemented or inherited, and therefore scanning for such types is a logical error.
+
+[See extra examples](https://github.com/Lenkoras/Siva.Extensions.DependencyInjection.Implementations/blob/main/Tests/ImplementationInjectionExtensionsTests.cs).
