@@ -37,11 +37,11 @@ namespace Siva.Extensions.DependencyInjection.Implementations.Tests
         {
             // Arrange
             IServiceCollection services = new ServiceCollection();
-            Assembly assembly = typeof(ImplementationInjectionExtensionsTests).Assembly;
+            IEnumerable<Type> types = typeof(ImplementationInjectionExtensionsTests).Assembly.GetExportedTypes();
 
             // Act
-            services.AddImplementations(typeof(ITokenGenerator<>), assembly);
-            services.AddImplementations(typeof(IRepository<>), assembly);
+            services.AddImplementations(typeof(ITokenGenerator<>), types);
+            services.AddImplementations(typeof(IRepository<>), types);
 
             // Assert
             IServiceProvider serviceProvider = services.BuildServiceProvider();
@@ -55,6 +55,32 @@ namespace Siva.Extensions.DependencyInjection.Implementations.Tests
             userRepository.GenerateToken(user!).Should().NotBeNull();
 
             userRepositoryServiceDescriptor.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void AddImplementationsFromAssemblies()
+        {
+            // Arrange
+            IServiceCollection services = new ServiceCollection();
+
+            IEnumerable<Assembly> assemblies = new Assembly[] {
+                typeof(ImplementationInjectionExtensions).Assembly,
+                typeof(ImplementationInjectionExtensionsTests).Assembly
+            };
+
+            // Act
+            services.AddImplementations(typeof(Factory<>), assemblies);
+
+            // Assert
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
+
+            Factory<Shoe> shoeFactory = serviceProvider.GetRequiredService<Factory<Shoe>>();
+
+            ServiceDescriptor? shoeFactoryServiceDescriptor = services.FirstOrDefault(descriptor => descriptor.ServiceType == typeof(Factory<Shoe>));
+
+            Shoe? shoe = shoeFactory.Create();
+            shoe.Should().NotBeNull();
+            shoeFactoryServiceDescriptor.Should().NotBeNull();
         }
 
         [Fact]

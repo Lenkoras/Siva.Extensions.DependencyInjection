@@ -12,7 +12,7 @@
 
         protected override Type? PrepareType(Type implementationType, Type[] interfaces) =>
             interfaces.FirstOrDefault(
-                        type => type.IsGenericType &&
-                            type.GetGenericTypeDefinition() == AssignableType);
+                type => type.IsGenericType &&
+                type.GetGenericTypeDefinition() == AssignableType);
     }
 }

@@ -26,7 +26,10 @@ namespace Siva.Extensions.DependencyInjection
         /// <returns>The same service collection to continue the call chain.</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException">Throws an exception if <see cref="Type.IsSealed"/> for <paramref name="targetAssignableType"/> returns <see langword="true"/>.</exception>
-        public static IServiceCollection AddImplementations(this IServiceCollection services, Type targetAssignableType, IEnumerable<Type> types, ServiceLifetime lifetime = ServiceLifetime.Scoped)
+        public static IServiceCollection AddImplementations(this IServiceCollection services,
+            Type targetAssignableType,
+            IEnumerable<Type> types,
+            ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
             ArgumentNullException.ThrowIfNull(services);
             ArgumentNullException.ThrowIfNull(targetAssignableType);
@@ -68,7 +71,10 @@ namespace Siva.Extensions.DependencyInjection
         /// <returns>The same service collection to continue the call chain.</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException">Throws an exception if <see cref="Type.IsSealed"/> for <paramref name="targetAssignableType"/> returns <see langword="true"/>.</exception>
-        public static IServiceCollection AddImplementations(this IServiceCollection services, Type targetAssignableType, Assembly assembly, ServiceLifetime lifetime = ServiceLifetime.Scoped)
+        public static IServiceCollection AddImplementations(this IServiceCollection services,
+            Type targetAssignableType,
+            Assembly assembly,
+            ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
             ArgumentNullException.ThrowIfNull(assembly);
 
@@ -90,7 +96,10 @@ namespace Siva.Extensions.DependencyInjection
         /// <returns>The same service collection to continue the call chain.</returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException">Throws an exception if <see cref="Type.IsSealed"/> for <paramref name="targetAssignableType"/> returns <see langword="true"/>.</exception>
-        public static IServiceCollection AddImplementations(this IServiceCollection services, Type targetAssignableType, IEnumerable<Assembly> assemblies, ServiceLifetime lifetime = ServiceLifetime.Scoped)
+        public static IServiceCollection AddImplementations(this IServiceCollection services,
+            Type targetAssignableType,
+            IEnumerable<Assembly> assemblies,
+            ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
             ArgumentNullException.ThrowIfNull(assemblies);
 

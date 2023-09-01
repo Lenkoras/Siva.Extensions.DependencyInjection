@@ -29,15 +29,15 @@ namespace Siva.Extensions.DependencyInjection.Providers
         protected virtual Type? PrepareType(Type implementationType, Type[] interfaces)
         {
             return implementationType.IsAssignableTo(AssignableType) ?
-                        AssignableType :
-                    null;
+                AssignableType :
+                null;
         }
 
         [return: NotNullIfNotNull(nameof(targetAssignableType))]
         private static Type GetServiceType(Type[] types, Type targetAssignableType) =>
             types.FirstOrDefault(
-                        type => type != targetAssignableType &&
-                            type.IsAssignableTo(targetAssignableType))
-                        ?? targetAssignableType;
+                type => type != targetAssignableType &&
+                    type.IsAssignableTo(targetAssignableType))
+                ?? targetAssignableType;
     }
 }
