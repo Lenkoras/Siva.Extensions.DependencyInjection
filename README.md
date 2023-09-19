@@ -1,5 +1,6 @@
 # Siva.Extensions.DependencyInjection.Implementations
 Extensions designed to add all implementations of an interface or class from a sequence of types or assemblies to the IServiceCollection.
+[![NuGet](http://img.shields.io/nuget/v/Siva.Extensions.DependencyInjection.Implementations.svg)](https://www.nuget.org/packages/Siva.Extensions.DependencyInjection.Implementations/)
 
 # How to use
 
