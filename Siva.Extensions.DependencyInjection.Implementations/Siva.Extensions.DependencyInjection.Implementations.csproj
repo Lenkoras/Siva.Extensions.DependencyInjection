@@ -2,13 +2,13 @@
 
   <PropertyGroup>
 	<OutputType>Library</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageId>Siva.Extensions.DependencyInjection.Implementations</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>Lenkoras</Authors>
 	<Description>Selects non-abstract, non-sealed classes from the provided types and adds to the collection of services those related to the provided type. It can be implementation or inheritance.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
